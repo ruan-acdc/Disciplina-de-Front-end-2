@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrado Perfeito</title>
+    <style> body {display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; font-family: Arial, sans-serif;} </style>
+
+    
+
+</head>
+<body>
+
+    <h1 id = "titulo">Oi tudo bem</h1>
+    <h1 id = "imc"></h1>
+    <script>
+        function quadradoPerfeito(lado) {
+            let area = lado * lado;
+            let perimetro = 4 * lado;
+            return console.log(`A área do quadrado é: ${area} e o perímetro do quadrado é: ${perimetro}`);
+        }
+        const lado = window.prompt('Qual o lado do quadrado perfeito? ');
+        n = Number(lado);
+        let resultado = quadradoPerfeito(n);
+        document.getElementById('titulo').textContent = `A área do quadrado é: ${n * n} e o perímetro do quadrado é: ${4 * n}`;
+
+        const altura = window.prompt('Qual a sua altura em m? ');
+        const peso = window.prompt('Qual o seu peso em kg? ');
+
+        altura1 = Number(altura);
+        peso1 = Number(peso);
+
+        let imc = peso1 / (altura1 * altura1);
+
+        if (imc < 18.5) {
+            document.getElementById('imc').textContent = `Seu IMC é: ${imc.toFixed(2)} (Abaixo do peso)`;
+        } else if (imc >= 18.5 && imc < 24.9) {
+            document.getElementById('imc').textContent = `Seu IMC é: ${imc.toFixed(2)} (Peso normal)`;
+        } else if (imc >= 25 && imc < 29.9) {
+            document.getElementById('imc').textContent = `Seu IMC é: ${imc.toFixed(2)} (Sobrepeso)`;
+        } else {
+            document.getElementById('imc').textContent = `Seu IMC é: ${imc.toFixed(2)} (Obesidade)`;
+        }
+
+
+
+    
+    </script>
+
+
+</body>
+
+<footer>
+
+</footer>
+</html>
