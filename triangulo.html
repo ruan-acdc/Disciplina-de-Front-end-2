@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulo</title>
+    <link rel="stylesheet" href="triangulo.css">
+
+
+</head>
+<body>
+    <script src="triangulo.js"></script>
+    <h1 id="resultado"></h1>
+    <script>
+        let b = window.prompt("Qual o tamanho da base do trianglulo: ")
+        b = Number(b)
+        let h = window.prompt("Qual a altura do triangulo: ")
+        h = Number(h)
+
+        let triangulo = Areatriangulo(b,h)
+
+        document.getElementById("resultado").textContent = 'A área do triangulo é: ' + triangulo
+    </script>
+
+    
+</body>
+</html>
